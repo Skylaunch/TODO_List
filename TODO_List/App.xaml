@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:TODO_List"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Разворачиваем на 180 градусов все Actions, чтобы они не были вверх ногами после разворота StackPanel -->
+        <Style TargetType="local:Action">
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="180"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>
